@@ -1,5 +1,7 @@
 # MACSWAP
 
+Вообще делал для себя, но может кому-то нужно.
+
 MAC address changer for Arch Linux.
 
 Install:
