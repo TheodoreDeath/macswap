@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import sys
 import subprocess
 import time
@@ -12,8 +10,6 @@ RESET = "\033[0m"
 
 DRY_RUN = "--dry-run" in sys.argv
 
-
-# ---------- UTILS ----------
 
 def run(cmd):
     if DRY_RUN:
@@ -65,9 +61,6 @@ def parse_time(t):
         "h": value * 3600
     }.get(unit, None)
 
-
-# ---------- CORE ----------
-
 def set_mac(iface, option, mac=None):
     run(["ip", "link", "set", iface, "down"])
 
@@ -93,9 +86,6 @@ def auto_mode(ifaces, option, interval, mac=None):
 
     except KeyboardInterrupt:
         print(f"\n{RED}Stopped{RESET}")
-
-
-# ---------- MENU ----------
 
 def select_interfaces():
     interfaces = get_interfaces()
@@ -168,9 +158,6 @@ def menu():
             print(status_line(ifaces))
             input("\nDone. Press Enter...")
 
-
-# ---------- CLI ----------
-
 def cli_mode():
     args = sys.argv[1:]
 
@@ -216,8 +203,6 @@ def cli_mode():
 
         print(status_line(ifaces))
 
-
-# ---------- ENTRY ----------
 
 def main():
     check_root()
