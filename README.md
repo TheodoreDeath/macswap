@@ -2,46 +2,36 @@
 
 MAC address changer for Arch Linux.
 
-## Install
+Install:
 
 sudo pacman -S python macchanger iproute2
 
-## Run
+Run:
 
 sudo python3 macswap.py
 
-## Random MAC
+Random MAC:
 
 sudo python3 macswap.py wlan0 -r
 
-## Same Vendor MAC
+Same Vendor MAC:
 
 sudo python3 macswap.py wlan0 -e
 
-## Custom MAC
+Custom MAC:
 
 sudo python3 macswap.py wlan0 -m 00:11:22:33:44:55
 
-## Auto Mode
+Auto Mode:
 
 sudo python3 macswap.py wlan0 -r -t 5m
 
-## Dry Run
+Dry Run:
 
 python3 macswap.py --dry-run
 
-## Help
+Help:
 
 python3 macswap.py --help
 
-## Requirements
-
-- Arch Linux
-- Python 3
-- macchanger
-- iproute2
-- sudo/root
-
-## License
-
-MIT
+License: MIT
