@@ -208,7 +208,7 @@ def main():
     check_root()
 
     if len(sys.argv) == 1:
-        menu()  # 🔥 запуск меню
+        menu()
     else:
         cli_mode()
 
